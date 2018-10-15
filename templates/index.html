@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 style="text-align:center; margin-top:50px; margin-bottom:50px">Build a Blog</h1>
+<ol style="list-style:none">
+    {% for post in post_list: %}
+    <li>
+        <a href="/post_item" style="font-size:30px">"{{post.title}}"</a>
+        <p>"{{post.content}}"</p>
+        <hr>
+    </li>
+    {% endfor %}
+</ol>
+
+{% endblock %}
